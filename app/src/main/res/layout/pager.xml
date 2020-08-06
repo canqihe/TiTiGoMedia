@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/border_stock">
+
+        <EditText
+            android:id="@+id/input_tx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="输入需要加密/解密的信息"
+            android:padding="8dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/paste_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@android:color/white"
+            android:padding="11dp"
+            android:text="PASTE"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/encryption_btn"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:text="加密" />
+
+        <Button
+            android:id="@+id/decode_btn"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/encryption_btn"
+            android:background="@color/colorPrimary"
+            android:text="解密" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/decode_btn"
+            android:hint="密码"
+            android:inputType="textPassword" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/border_stock">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/result_tx"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:hint="结果"
+                android:padding="8dp"
+                android:textSize="18dp" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/copy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@android:color/white"
+            android:padding="11dp"
+            android:text="COPY"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
